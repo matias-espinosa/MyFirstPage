@@ -4,3 +4,8 @@ h1 {
     text-align: center;
     background-color: darkslategrey;
 }
+.verde {
+    color: green;
+    background-color: yellow;
+    font-size: 24px;
+}
