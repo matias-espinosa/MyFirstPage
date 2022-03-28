@@ -1,0 +1,40 @@
+.header {
+    background-color: rgb(4, 197, 4);
+    padding: 5px;
+}
+
+.nav {
+    background-color: rgb(164, 236, 164);
+    padding: 5px;
+}
+
+.section {
+    background-color: rgb(236, 189, 189);
+    margin: 0;
+    padding: 5px;
+    background-color: lightgray;
+}
+
+.section > h1, .article {
+    margin: 10px;
+    padding: 5px;
+  }
+
+.article {
+  background: white;
+}
+
+.article > h2, p {
+    margin: 4px;
+    font-size: 90%;
+  }
+
+.aside {
+    background-color: rgb(213, 255, 255);
+    padding: 10px;
+}
+
+.footer {
+    background-color: rgb(248, 215, 166);
+}
+
