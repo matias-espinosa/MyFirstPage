@@ -1,18 +1,32 @@
+* {
+  margin:0;
+  pading:0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .header {
     background-color: rgb(4, 197, 4);
     padding: 5px;
+
 }
 
 .nav {
     background-color: rgb(164, 236, 164);
     padding: 5px;
+    border: 2px;
+    border-style: solid;
+    border-radius: 0.5em;
+    margin: 10px;
 }
 
 .section {
     background-color: rgb(236, 189, 189);
-    margin: 0;
+    margin: 10px;
     padding: 5px;
     background-color: lightgray;
+    border: 2px;
+    border-style: solid;
+    border-radius: 1em;
 }
 
 .section > h1, .article {
@@ -22,6 +36,10 @@
 
 .article {
   background: white;
+  border: 2px;
+  border-style: solid;
+  border-radius: 0.5em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .article > h2, p {
