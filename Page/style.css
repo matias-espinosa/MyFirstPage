@@ -12,13 +12,13 @@
     align-items: center;
     justify-content: space-between;
     padding: ;
-    background-color: black;
-    color: #fff;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     border-radius: 0.5rem;
+    margin-top: 1rem;
 }
 
 .nav-links {
-  color: #fff;
   margin: 1rem;
   text-decoration: none;
   font-size: 1rem;
@@ -27,16 +27,16 @@
 }
 
 a {
-  color: #fff;
+  color: rgb(0, 0, 0);
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-variant-caps:all-small-caps ;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 /* LOGO */
 .logo {
- font-size: 1rem;
+ font-size: 1.5rem;
  font-variant-caps:all-small-caps ;
  padding: 1rem;
 
@@ -49,7 +49,7 @@ a {
   font-size: 18px;
  }
  .menu li:hover {
-  background-color: #b6b6b6;
+  background-color: #2424246b;  
   border-radius: 5px; 
   transition: 0.3s ease;
  }
@@ -100,30 +100,35 @@ input[type=checkbox]{
  /*HAMBURGER MENU*/
  .hamburger {
   display: none;
-  font-size: 24px;
+  font-size: 34px;
   user-select: none;
-  padding: 1rem;
+  padding: 0.1rem;
  }
  /* APPLYING MEDIA QUERIES */
  @media (max-width: 768px) {
  .menu { 
   display:none;
   position: absolute;
-  background-color:rgba(0, 0, 0, 0.521);
+  background-color:rgba(0, 0, 0, 0.486);
   right: 0;
   left: 0;
   text-align: center;
   padding: 16px 0;
+  
  }
  .menu li:hover {
   display: inline-block;
   background-color:#000000;
   transition: 0.3s ease;
-  color: white;
  }
+ a {
+   color:white
+ }
+ /*
  .menu li + li {
   margin-top: 1px;
  }
+ */
  input[type=checkbox]:checked ~ .menu{
   display: block;
  }
@@ -140,15 +145,10 @@ input[type=checkbox]{
 */
 
 :root {
-  --clr-primary-400: 0, 0%, 70%;
-  --clr-secondary-400: 0, 0%, 50%;
-  --clr-secondary-500: 0, 0%, 30%;
-  --clr-neutral-100: 0 0% 0%;
-  --clr-neutral-200: 0 0% 90%; 
-  --clr-neutral-300: 0 0% 81%;
-
+  --clr-primary-400: 0, 0%, 100%;
+  --clr-secondary-400: 0, 0%, 40%;
+  --clr-neutral-200: 0 0% 0%; 
 }
-
 /* Box sizing rules */
 *,
 *::before,
@@ -242,18 +242,13 @@ body {
 .bg-secondary-400 {
   background: hsl(var(--clr-secondary-400));
 }
-.bg-secondary-500 {
-  background: hsl(var(--clr-secondary-500));
-}
-.bg-neutral-100 {
-  background: hsl(var(--clr-neutral-100));
-}
+
 
 /* components */
 .testimonial-grid {
   display: grid;
   gap: 1rem;
-  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr;
   grid-template-areas:
    'one'
    'two'
@@ -267,8 +262,12 @@ body {
 }
 
 .testimonial {
-  padding: 0.5rem;
+  padding: 2rem;
   border-radius: 0.5rem;
+}
+
+.testimonial img {
+  width: 30rem;
 }
 
 .testimonial:nth-child(1) {
@@ -290,7 +289,7 @@ body {
   grid-area: six;
 }
 
-
+/*
 @media (min-width: 33em) {
   .testimonial-grid {
       grid-template-areas:
@@ -300,14 +299,16 @@ body {
       "four four";
   }
 }
-
+*/
 @media (min-width: 38em) {
   .testimonial-grid {
     grid-template-areas:
-     'one one'
-     'two five'
-     'three five'
-     'four four';
+     'one'
+     'two'
+     'three'
+     'four'
+     'five'
+     'six';
   }
 }
 
@@ -315,22 +316,19 @@ body {
   .testimonial-grid {
       grid-template-areas:
       "one two"
-      "five five five"
-      "three four four";
+      "three four"
+      "five six";
   }
 }
 
 @media (min-width: 75em) {
   .testimonial-grid {
       grid-template-areas:
-      "one one two five"
-      "three four four five";
+      "one two three "
+      "four five six";
   }
 }
 
-.testimonial img {
-  width: 20rem;
-}
 
 /*
 .testimonial .name {
