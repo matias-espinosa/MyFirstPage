@@ -1,17 +1,24 @@
-* {
-  margin:0;
-  padding:0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+:root {
+  --clr-primary-400: 0, 0%, 100%;
+  --clr-secondary-400: 0, 0%, 50%;
+  --clr-neutral-200: 0 0% 0%; 
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+  padding:10;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-
-/* NAVBAR STYLING STARTS */
+/*=======================================
+======== NAVBAR STYLING STARTS ==========
+=======================================*/
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: ;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     border-radius: 0.5rem;
@@ -29,24 +36,19 @@
 a {
   color: rgb(0, 0, 0);
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-variant-caps:all-small-caps ;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 /* LOGO */
 .logo {
- font-size: 1.5rem;
- font-variant-caps:all-small-caps ;
- padding: 1rem;
-
+ padding: 0.4rem;
 }
 
 /* NAVBAR MENU */
 .menu {
   display: flex;
-  gap: 1em;
-  font-size: 18px;
  }
  .menu li:hover {
   background-color: #2424246b;  
@@ -61,38 +63,10 @@ li {
   list-style: none;
  }
 
+ /*=======================================
+======RESPONSIVE NAVBAR MENU STARTS=======
+=======================================*/
 
-
- /* FOOTER 
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content:center;
-  background-color: rgb(131, 131, 131);
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 40px;
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-  font-variant-caps:all-small-caps ;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.links-footer{
-  display: flex;
-  gap: 1em;
-}
-
-.footer li {
-  padding: 5px 14px;
-  font-size: 1rem;
- }
-*/
-
-
-/*RESPONSIVE NAVBAR MENU STARTS*/
 /* CHECKBOX HACK */
 input[type=checkbox]{
   display: none;
@@ -113,7 +87,8 @@ input[type=checkbox]{
   right: 0;
   left: 0;
   text-align: center;
-  padding: 16px 0;
+  padding: 1rem;
+  margin-top: 2rem;
   
  }
  .menu li:hover {
@@ -122,13 +97,11 @@ input[type=checkbox]{
   transition: 0.3s ease;
  }
  a {
-   color:white
+   color:white;
+   font-size: 1.5rem;
+   
  }
- /*
- .menu li + li {
-  margin-top: 1px;
- }
- */
+
  input[type=checkbox]:checked ~ .menu{
   display: block;
  }
@@ -143,18 +116,6 @@ input[type=checkbox]{
 
  ======================================================================================================
 */
-
-:root {
-  --clr-primary-400: 0, 0%, 100%;
-  --clr-secondary-400: 0, 0%, 40%;
-  --clr-neutral-200: 0 0% 0%; 
-}
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 
 /* Remove default margin */
 body,
@@ -186,6 +147,10 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: hsl(var(--clr-neutral-200));
 }
 
 /* A elements that don't have a class get default styles */
@@ -194,8 +159,7 @@ a:not([class]) {
 }
 
 /* Make images easier to work with */
-img,
-picture {
+img {
   max-width: 100%;
   display: block;
 }
@@ -208,7 +172,7 @@ select {
   font: inherit;
 }
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them 
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
     scroll-behavior: auto;
@@ -223,14 +187,15 @@ select {
     scroll-behavior: auto !important;
   }
 }
-
+*/
+/*
 body {
   display: grid;
   place-content: center;
   min-height: 100vh;
   background-color: hsl(var(--clr-neutral-200));
 }
-
+*/
 /* utilities */
 .flex {
   display: flex;
@@ -243,11 +208,10 @@ body {
   background: hsl(var(--clr-secondary-400));
 }
 
-
 /* components */
 .testimonial-grid {
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
   grid-template-columns: 1fr;
   grid-template-areas:
    'one'
@@ -258,7 +222,7 @@ body {
    'six';
   padding-block: 1rem;
   width: min(100%, 100%);
-  margin-inline: auto;
+
 }
 
 .testimonial {
@@ -268,6 +232,7 @@ body {
 
 .testimonial img {
   width: 30rem;
+  border-radius: 0.5rem;
 }
 
 .testimonial:nth-child(1) {
