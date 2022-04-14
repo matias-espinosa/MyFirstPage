@@ -36,7 +36,7 @@
 a {
   color: rgb(0, 0, 0);
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.1rem;
   font-variant-caps:all-small-caps ;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -78,37 +78,7 @@ input[type=checkbox]{
   user-select: none;
   padding: 0.1rem;
  }
- /* APPLYING MEDIA QUERIES */
- @media (max-width: 768px) {
- .menu { 
-  display:none;
-  position: absolute;
-  background-color:rgba(0, 0, 0, 0.486);
-  right: 0;
-  left: 0;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-  
- }
- .menu li:hover {
-  display: inline-block;
-  background-color:#000000;
-  transition: 0.3s ease;
- }
- a {
-   color:white;
-   font-size: 1.5rem;
-   
- }
-
- input[type=checkbox]:checked ~ .menu{
-  display: block;
- }
- .hamburger {
-  display: block;
- }
- }
+ 
 /*
  ======================================================================================================
 
@@ -143,7 +113,7 @@ html:focus-within {
 }
 
 /* Set core body defaults */
-body {
+.body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
@@ -211,7 +181,7 @@ body {
 /* components */
 .testimonial-grid {
   display: grid;
-  gap: 2rem;
+  gap: 1rem;
   grid-template-columns: 1fr;
   grid-template-areas:
    'one'
@@ -219,14 +189,14 @@ body {
    'three'
    'four'
    'five'
-   'six';
+   'six'
+   'seven';
   padding-block: 1rem;
   width: min(100%, 100%);
-
 }
 
 .testimonial {
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 0.5rem;
 }
 
@@ -253,6 +223,9 @@ body {
 .testimonial:nth-child(6) {
   grid-area: six;
 }
+.testimonial:nth-child(7) {
+  grid-area: seven;
+}
 
 /*
 @media (min-width: 33em) {
@@ -265,9 +238,40 @@ body {
   }
 }
 */
-@media (min-width: 38em) {
+
+
+ /*======================================
+================ FOTTER =================
+=======================================*/
+
+.footer {
+  display: flex;
+  margin:auto;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons {
+  margin: 0 1.5rem;
+  color: rgb(126, 126, 126);
+  font-size: 2em;
+  }
+
+.social-icons:hover {
+  color: rgb(255, 255, 255);
+  transition: 0.3s ease;
+}
+
+ /*======================================
+============ MEDIA QUERIES ==============
+=======================================*/
+
+/* Areas */
+@media (max-width: 575.98px) {
   .testimonial-grid {
     grid-template-areas:
+     'seven'
      'one'
      'two'
      'three'
@@ -275,44 +279,65 @@ body {
      'five'
      'six';
   }
+  .navbar{
+    margin: 0.5rem;
+  }
+  .testimonial{
+    margin: 0.5rem;
+  }
+  .logo {
+    width: 5em;
+   }
+  .social-icons{
+    font-size: 1.5em;
+  }
 }
 
-@media (min-width: 54em) {
+@media (min-width: 576px) {
   .testimonial-grid {
       grid-template-areas:
       "one two"
       "three four"
-      "five six";
+      "six six"
+      "five seven";
   }
 }
 
-@media (min-width: 75em) {
+@media (min-width: 1199.98px) {
   .testimonial-grid {
       grid-template-areas:
       "one two three "
-      "four five six";
+      "four five six"
+      "seven seven seven"; 
   }
 }
 
-
-/*
-.testimonial .name {
-  font-size: var(--fs-400);
-  font-weight: var(--fw-400);
-  line-height: 1;
-}
-
-.testimonial .position {
-  font-size: var(--fs-300);
-  opacity: 0.5;
-}
-
-.testimonial > p:first-of-type {
-  font-size: var(--fs-500);
-  line-height: 1.2;
-}
-
-.testimonial > p:last-of-type {
-  opacity: 0.7;
-}
-*/
+/* Nav */
+@media (max-width: 768px) {
+  .menu { 
+   display:none;
+   position: absolute;
+   background-color:rgba(0, 0, 0, 0.486);
+   right: 0;
+   left: 0;
+   text-align: center;
+   padding: 1rem;
+   margin-top: 2rem;
+  }
+  .menu li:hover {
+   display: inline-block;
+   background-color:#000000;
+   transition: 0.3s ease;
+  }
+  a {
+    color:white;
+    font-size: 1.5rem;
+  }
+ 
+  input[type=checkbox]:checked ~ .menu{
+   display: block;
+  }
+  .hamburger {
+   display: block;
+  }
+  }
