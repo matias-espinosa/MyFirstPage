@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Space+Mono&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0;
+    box-sizing: bod;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+p {
+    color: black;
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+    /* max-width: 1150px; possible solution, to parragraph to big on monitor*/
+}
+
+.section_title {
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+.section_title span{
+    color: red;
+}
+
+.cta {
+    /* Buttons stuff */
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 2px solid red;
+    font-size: 1.5rem;
+    color: white;
+    font-weight:900;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+    }
+    
+ .cta:hover {
+    /* Buttons hover*/
+    color: black;
+    background-color: rgb(255, 255, 255);
+    }
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*======================================================================================  
+================================== Hero Section ========================================
+======================================================================================*/
+
+#hero {
+/* background image */
+    background-image: url(img/background.png);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+#hero::after {
+/* Creates a black layer with transparency, infront of the iamge */
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .8;
+    z-index: -1;
+}
+
+#hero .hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+
+#hero h1 {
+/* Main text 'Helo, My...' */
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color:transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1s;
+}
+/* Animations applied, choosing when each h1 will appear */
+#hero h1:nth-child(1) {
+    animation-delay: 1s;
+}
+#hero h1:nth-child(2) {
+    animation-delay: 2s;
+}
+#hero h1:nth-child(3) {
+    font-weight: 500;
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 3s;
+}
+
+#hero h1 span {
+/* Box animation on title Hello, My....' */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: black;
+    animation: text_reveal_box 1s ease;
+    animation-delay: .5s;
+}
+/* Animations applied, selecting when each span appears' */
+#hero h1:nth-child(1) span {
+    animation-delay: .5s;
+}
+#hero h1:nth-child(2) span {
+    animation-delay: 1.5s;
+}
+#hero h1:nth-child(3) span {
+    animation-delay: 2.5s;
+}
+
+
+/*======================================================================================  
+================================== End Hero Section ====================================
+======================================================================================*/
+
+
+
+/*======================================================================================  
+================================== Drawings Section ====================================
+======================================================================================*/
+#services .services{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+#services .service_bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+/* Containers of images with section*/
+#services .service_item {
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+    padding-left: 30px;
+    border-radius: 10px;
+    background-size: 100%;
+    background-position: center;
+    margin: 10px 5%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+/* Black block with opacity on the images */
+#services .service_item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+/* Different conllection images */
+#services .service_item:nth-child(1) {
+    background-image: url(img/square.png);
+}
+
+#services .service_item:nth-child(2) {
+    background-image: url(img/small_sketchbook.png);    
+}
+
+#services .service_item:nth-child(3) {
+    background-image: url(img/medium_sketchbook.png);    
+}
+
+#services .service_item:nth-child(4) {
+    background-image: url(img/miscellaneous.png);    
+}
+
+/* Remove black block with opacity from the images */
+#services .service_item:hover::after {
+    display: none;
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
+
+
+#services .service_item h2 {
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 1.5rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight:900;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    border:2px solid red ;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+
+#services .service_item h2:hover {
+/* Button hover*/
+    color: white;
+    background-color: black;
+}
+
+/*======================================================================================  
+================================= End Drawings Section =================================
+======================================================================================*/
+
+
+/*======================================================================================  
+================================= About Section =================================
+======================================================================================*/
+
+#about .about {
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+#about .col_right .cta {
+    color:black;
+}
+
+#about .col_right .cta:hover {
+    color:white;
+    background-color: black;
+}
+
+#about .col_left .about_img {
+    margin-top: 40px;
+}
+
+
+/*======================================================================================  
+================================= End About Section =================================
+======================================================================================*/
+
+@keyframes text_reveal_box {
+    50% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes text_reveal {
+    100% {
+        color: white
+    }
+    
+}
+
+@keyframes text_reveal_name {
+    100% {
+        color: red;
+        font-weight: 500;
+    }
+    
+}
+
+/* Main text 'Helo, My...' */
