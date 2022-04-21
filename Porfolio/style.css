@@ -35,7 +35,7 @@ p {
     font-size: 4rem;
     font-weight: 300;
     color: black;
-    margin-bottom: 10px;
+    margin-bottom: 17px;
     text-transform: uppercase;
     letter-spacing: .2rem;
     text-align: center;
@@ -290,7 +290,7 @@ p {
     flex-direction: column; /*sets the icons below Contact Info*/
     max-width: 1200px;
     margin: 0 auto;
-    min-height: 500px;
+    min-height: 180px;
 }
 #contact .contact_items {
     display: flex;
@@ -316,6 +316,97 @@ p {
   color: rgb(255, 0, 0);
   transition: 0.3s ease;
 }
+
+/*--------------FORM---------------*/   
+
+#contact .containerForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+#contact .titleForm {
+    font-size: 2rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+#contact .titleForm span{
+    color: red;
+}
+/*
+/////////////////////PROBABLY DONT NEEDED////////////////////////////
+#contact .containerForm form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+*/ 
+
+#contact form .user-details .input-box { 
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+#contact .user-details .input-box .details {
+    font-weight: 300;
+}
+
+#contact .user-details .input-box input{
+    height: 30px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    font-size: 1.5rem;
+    margin-top: 5px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+#contact .user-details .input-box input:focus,
+#contact .user-details .input-box input:valid {
+    border-color: black;
+}
+
+#contact form .button {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact form .button input{
+    display: inline-block;
+    width: 94%;
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 2px solid red;
+    font-size: 1.5rem;
+    color:black;
+    font-weight:900;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+
+#contact form .button input:hover {
+    /* Buttons hover*/
+    color: white;
+    background-color: black;
+    }
+
+
 
 
 /*======================================================================================  
