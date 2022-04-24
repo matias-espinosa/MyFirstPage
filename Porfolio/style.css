@@ -160,7 +160,7 @@ p {
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     color: rgba(216, 216, 216, 0.116);
-    font-size: 10rem;
+    font-size: 6.5rem;
     font-weight: 900;
     letter-spacing: 50px;
     z-index: -1;
@@ -326,6 +326,7 @@ p {
     text-align: center;
     max-width: 1500px;
     margin: 0 auto;
+    
 }
 
 #services .service_bottom {
@@ -338,7 +339,9 @@ p {
 }
 
 #services .service_top {
-    width: 400px;
+    max-width: 500px;
+    margin: 0 auto;
+
 }
 
 
