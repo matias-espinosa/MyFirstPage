@@ -9,6 +9,7 @@
 html {
     font-size: 10px;
     font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -76,16 +77,170 @@ p {
 }
 
 .brand h1{
-    font-size: 3em;
+    font-size: 2em;
     text-transform: uppercase;
     color: white;
     letter-spacing: .2rem;
     text-align: center;
+    font-weight: 500;
 }
 
 .brand h1 span {
     color:red;
 }
+
+/*======================================================================================  
+================================== Header Section ========================================
+======================================================================================*/
+
+#header {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+    
+}
+
+#header .header {
+    min-height: 8vh;
+    background-color: rgb(0, 0, 0);
+    transition: .3s ease backgroud-color;
+}
+
+ /*------------------------- NAV BAR -------------------------*/
+
+#header .nav_bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+#header .nav_list ul{
+    list-style: none;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    width: 100vw;
+    height: 100vh;
+    left: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: .5s ease left;
+}
+#header .nav_list ul.active {
+    left: 0;
+}
+
+
+#header .nav_list ul a {
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 20px;
+    display: block;
+}
+
+#header .nav_list ul a::after {
+    content: attr(data_after);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: rgba(216, 216, 216, 0.116);
+    font-size: 10rem;
+    font-weight: 900;
+    letter-spacing: 50px;
+    z-index: -1;
+    transition: .3s ease letter-spacing;
+}
+
+#header .nav_list ul li:hover a::after{
+    transform: translate(-50%, -50%) scale(1);
+    letter-spacing: initial;
+}
+
+#header .nav_list ul li:hover a{
+        color: red;
+    
+    }
+    
+
+ /*------------------------- HAMBURGUER -------------------------*/
+#header .hamburguer {
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    border: 3px solid white;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    cursor: pointer;
+    transform: scale(.8);
+    margin-right: 20px;
+}
+
+#header .hamburguer:after{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid white;
+    animation: hamburger_pulse 1.5s ease infinite;
+}
+
+#header .hamburguer .bar {
+    height: 2px;
+    width: 30px;
+    position: relative;
+    background-color: white;
+    z-index: -1;
+}
+
+#header .hamburguer .bar::after,
+#header .hamburguer .bar::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: white;
+    transition: .3s ease;
+    transition-property: top, bottom;
+}
+
+#header .hamburguer .bar::after {
+    top: 8px;
+}
+
+#header .hamburguer .bar::before {
+    bottom: 8px;
+}
+
+#header .hamburguer.active .bar::before {
+    bottom: 0;
+}
+#header .hamburguer.active .bar::after {
+    top: 0;
+}
+
+
 
 /*======================================================================================  
 ================================== Hero Section ========================================
@@ -114,7 +269,6 @@ p {
 
 #hero .hero {
     max-width: 1200px;
-    margin: 0 auto;
     padding: 0 50px;
     justify-content: flex-start;
 }
@@ -172,7 +326,6 @@ p {
     text-align: center;
     max-width: 1500px;
     margin: 0 auto;
-    padding: 100px 0;
 }
 
 #services .service_bottom {
@@ -184,15 +337,18 @@ p {
     margin-top: 50px;
 }
 
+#services .service_top {
+    width: 400px;
+}
+
+
 /* Containers of images with section*/
 #services .service_item {
     flex-basis: 80%;
     display: flex;
-    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
     padding: 50px;
-    padding-left: 30px;
     border-radius: 10px;
     background-size: 100%;
     background-position: center;
@@ -212,8 +368,23 @@ p {
     background-color: black;
     opacity: .7;
     z-index: -1;
+    transition: .3s ease;
+    transition-property: background-color, opacity;
 }
-/* Different conllection images */
+
+/* Remove black block with opacity from the images */
+#services .service_item:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .1;
+}
+
+/* Different collection images */
 #services .service_item:nth-child(1) {
     background-image: url(img/square.png);
 }
@@ -230,12 +401,6 @@ p {
     background-image: url(img/miscellaneous.png);    
 }
 
-/* Remove black block with opacity from the images */
-#services .service_item:hover::after {
-    display: none;
-    color: black;
-    background-color: rgb(255, 255, 255);
-}
 
 #services .service_item h2 {
     display: inline-block;
@@ -247,16 +412,18 @@ p {
     text-transform: uppercase;
     letter-spacing: .1rem;
     border:2px solid red ;
+    background-color: black ;
     transition: .3s ease;
     transition-property: background-color, color;
 }
 
+/* BETTER WITHOUTH IT
 #services .service_item h2:hover {
-/* Button hover*/
+/* Button hover
     color: white;
     background-color: black;
 }
-
+*/
 /*======================================================================================  
 ================================= About Section =================================
 ======================================================================================*/
@@ -424,6 +591,11 @@ p {
     padding-bottom: 10px;
 }
 
+#footer h1{
+    font-size: 2.8rem;
+    letter-spacing: .5rem;
+}
+
 #footer h2 {
     color: white;
     font-weight: 500;
@@ -444,6 +616,17 @@ p {
 /*======================================================================================  
 ===================================== Animations =======================================
 ======================================================================================*/
+
+@keyframes hamburger_pulse {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.4);
+    }
+}
 
 @keyframes text_reveal_box {
     50% {
@@ -475,10 +658,94 @@ p {
 ==================================== Media Queries =====================================
 ======================================================================================*/
 
-
 /*tablet*/
- @media screen and (min-width: 768px){
+@media screen and (min-width: 768px){
+    .cta {
+        font-size: 2.5rem;
+        padding: 20px 60px;
+    }
+    h1.section_title {
+        font-size: 5rem;
+    }
+    /*Hero*/
+    #hero h1 {
+         font-size: 6rem;
+     }
+    /*Services*/
+    #Services .services {
+        min-height: 750px;
+    }
+    #services .service_bottom .service_item {
+         flex-basis: 45%;
+         margin: 1.5%;
+     }
 
+    #services .service_top {
+        width: 400px;
+    }
+     /*About*/
+     #about .about {
+         flex-direction: row;
+     }
+     #about .col_left {
+         margin: 60px;
+     }
+     #about .about_img {
+         width: 250px;
+     }
+
+     #about .col_right {
+         text-align: left;
+         padding: 30px;
+     }
+     #about .col_right h1 {
+         text-align: left;
+     }
+
+     /*Contact*/
+     #contact .contact_items {
+        padding: 0.5em 20em;
  }
+}
+ /*End tablet*/
 
-     
+/*Desktop*/
+@media only screen and (min-width: 1200px) {
+    /*header*/
+    #header .hamburguer {
+        display: none;
+    }
+
+    #header .nav_list ul {
+        position: initial;
+        display: block;
+        height: auto;
+        width: fit-content;
+        background-color: transparent;
+    }
+
+    #header .nav_list ul li {
+        display: inline-block;
+    }
+    #header .nav_list ul a::after{
+        display: none
+    }
+    #header .nav_list ul li a {
+        font-size: 1.8rem;
+    }
+    /* End header*/
+
+    #services .service_bottom{
+        width: 100%;
+    }
+
+    #services .service_bottom .service_item {
+        margin: 1%;
+        flex-basis: 23%;
+    }
+
+    #services .service_top {
+        width: 600px;
+        margin: 0 auto;
+    }
+}
