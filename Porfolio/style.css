@@ -89,6 +89,20 @@ p {
     color:red;
 }
 
+.smallTitles {
+    font-size: 2rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+.smallTitles span{
+    color: red;
+}
+
 /*======================================================================================  
 ================================== Header Section ========================================
 ======================================================================================*/
@@ -326,6 +340,7 @@ p {
     text-align: center;
     max-width: 1500px;
     margin: 0 auto;
+    margin-bottom: 100px;
     
 }
 
@@ -432,6 +447,82 @@ p {
 ================================== Carousel Section ========================================
 ======================================================================================*/
 
+#carousel .carousel {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;    
+}
+
+#carousel .carousel__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#carousel .carousel__track-container {
+    background-color: aqua;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#carousel .carousel__track {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    transition: transform 250ms ease-in;
+}
+
+#carousel .carousel__slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#carousel .carousel__button  {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+#carousel .carousel__button--left {
+    left: -18px
+} 
+
+#carousel .carousel__button--right {
+    right: -18px
+} 
+
+#carousel .carousel__button img {
+    width: 20px;
+}
+
+#carousel .carousel__nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px
+}
+
+#carousel .carousel__indicator {
+    border: 0;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0,0,0,.3);
+    margin: 0 12px;
+}
+
+#carousel .carousel__indicator.current-slide {
+    background: rgba(0,0,0,0.75);
+}
+
 
 
 /*======================================================================================  
@@ -506,19 +597,6 @@ p {
     border-radius: 5px;
 }
 
-#contact .titleForm {
-    font-size: 2rem;
-    font-weight: 300;
-    color: black;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: .2rem;
-    text-align: center;
-}
-
-#contact .titleForm span{
-    color: red;
-}
 /*
 /////////////////////PROBABLY DONT NEEDED////////////////////////////
 #contact .containerForm form .user-details {
