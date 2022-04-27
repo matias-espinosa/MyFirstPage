@@ -58,9 +58,9 @@ slides.forEach((slide, index) => {
 const setSlidePosition = (slide, index) => {
     slide.style.left = slideWidth * index + 'px';
 }
-
 slides.forEach(setSlidePosition)
 
+// function to move slides
 const moveToSlide = (track, currentSlide, targetSlide) => {
     track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
     currentSlide.classList.remove('current-slide');
@@ -70,18 +70,20 @@ const moveToSlide = (track, currentSlide, targetSlide) => {
 prevButton.addEventListener('click', e => {
     const currentSlide = track.querySelector('.current-slide');
     const prevSlide = currentSlide.previousElementSibling;
-    moveToSlide(track, currentSlide, prevSlide)
+    moveToSlide(track, currentSlide, prevSlide);
 })
 // when I click right, move slides to the right
 nextButton.addEventListener('click', e => {
     const currentSlide = track.querySelector('.current-slide');
     const nextSlide = currentSlide.nextElementSibling;
-    moveToSlide(track, currentSlide, nextSlide)
+    moveToSlide(track, currentSlide, nextSlide);
 })
 
-
-
-
-
-
 //when I click nav indicators, move to that slide
+
+dotsNav.addEventListener('click', e => {
+    //what indicator was clicked om?
+    const targetDot = e.target.closest('button');
+    if (!targetDot) return;
+    
+})

@@ -283,7 +283,7 @@ p {
 
 #hero .hero {
     max-width: 1200px;
-    padding: 0 50px;
+    padding: 0 30px;
     justify-content: flex-start;
 }
 
@@ -340,8 +340,7 @@ p {
     text-align: center;
     max-width: 1500px;
     margin: 0 auto;
-    margin-bottom: 100px;
-    
+    padding: 100px 20px;    
 }
 
 #services .service_bottom {
@@ -374,6 +373,7 @@ p {
     position: relative;
     z-index: 1;
     overflow: hidden;
+    
 }
 /* Black block with opacity on the images */
 #services .service_item::after {
@@ -421,18 +421,20 @@ p {
 
 
 #services .service_item h2 {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
     padding: 10px 30px;
     font-size: 1.5rem;
     color: white;
     text-transform: uppercase;
     font-weight:900;
-    text-transform: uppercase;
     letter-spacing: .1rem;
     border:2px solid red ;
     background-color: black ;
     transition: .3s ease;
     transition-property: background-color, color;
+    cursor: pointer;
+    
 }
 
 /* BETTER WITHOUTH IT
@@ -452,6 +454,11 @@ p {
     width: 350px;
     height: 350px;
     margin: 0 auto;    
+}
+
+#carousel .collectionDescription{
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 #carousel .carousel__image {
@@ -507,7 +514,7 @@ p {
 #carousel .carousel__nav {
     display: flex;
     justify-content: center;
-    padding: 10px
+    padding: 10px;
 }
 
 #carousel .carousel__indicator {
@@ -536,7 +543,7 @@ p {
     margin: 0 auto;
     padding: 100px 20px;
 }
-
+/* ////////////////////////NOT IN USE, check class on index.html and remove if needed
 #about .col_right .cta {
     color:black;
 }
@@ -545,6 +552,7 @@ p {
     color:white;
     background-color: black;
 }
+*/
 
 #about .col_left .about_img {
     margin-top: 40px;
@@ -769,7 +777,7 @@ p {
      }
 
     #services .service_top {
-        width: 400px;
+        max-width: 800px;
     }
      /*About*/
      #about .about {
@@ -821,19 +829,28 @@ p {
     #header .nav_list ul li a {
         font-size: 1.8rem;
     }
-    /* End header*/
+    /* End header */
 
+    /* Services */
     #services .service_bottom{
         width: 100%;
     }
 
     #services .service_bottom .service_item {
         margin: 1%;
-        flex-basis: 23%;
+        flex-basis: 60%;
     }
 
     #services .service_top {
-        width: 600px;
+        max-width: 900px;
         margin: 0 auto;
+    }
+
+    #services .service_item {
+        padding: 50px 20%;
+    }
+
+    #services .service_item h2 {
+
     }
 }
