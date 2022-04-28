@@ -62,7 +62,7 @@ p {
     transition-property: background-color, color;
     }
     
- .cta:hover {
+.cta:hover {
     /* Buttons hover*/
     color: black;
     background-color: rgb(255, 255, 255);
@@ -87,6 +87,20 @@ p {
 
 .brand h1 span {
     color:red;
+}
+
+.smallTitles {
+    font-size: 2rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+.smallTitles span{
+    color: red;
 }
 
 /*======================================================================================  
@@ -269,7 +283,7 @@ p {
 
 #hero .hero {
     max-width: 1200px;
-    padding: 0 50px;
+    padding: 0 30px;
     justify-content: flex-start;
 }
 
@@ -326,7 +340,7 @@ p {
     text-align: center;
     max-width: 1500px;
     margin: 0 auto;
-    
+    padding: 100px 20px;    
 }
 
 #services .service_bottom {
@@ -359,6 +373,7 @@ p {
     position: relative;
     z-index: 1;
     overflow: hidden;
+    
 }
 /* Black block with opacity on the images */
 #services .service_item::after {
@@ -406,18 +421,20 @@ p {
 
 
 #services .service_item h2 {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
     padding: 10px 30px;
     font-size: 1.5rem;
     color: white;
     text-transform: uppercase;
     font-weight:900;
-    text-transform: uppercase;
     letter-spacing: .1rem;
     border:2px solid red ;
     background-color: black ;
     transition: .3s ease;
     transition-property: background-color, color;
+    cursor: pointer;
+    
 }
 
 /* BETTER WITHOUTH IT
@@ -432,7 +449,91 @@ p {
 ================================== Carousel Section ========================================
 ======================================================================================*/
 
+#carousel .carousel {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;    
+}
 
+#carousel .collectionDescription{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#carousel .carousel__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#carousel .carousel__track-container {
+    background-color: aqua;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#carousel .carousel__track {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    transition: transform 250ms ease-in;
+}
+
+#carousel .carousel__slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#carousel .carousel__button  {
+    position: absolute;
+    top: 115%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+#carousel .carousel__button--left {
+    left: -18px;
+} 
+
+#carousel .carousel__button--right {
+    right: -18px;
+} 
+
+#carousel .carousel__button img {
+    width: 20px;
+}
+
+#carousel .carousel__nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+#carousel .carousel__indicator {
+    border: 0;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0,0,0,.3);
+    margin: 0 12px;
+    cursor: pointer;
+}
+
+#carousel .carousel__indicator.current-slide {
+    background: rgba(0,0,0,0.75);
+}
+
+#carousel .is-hidden {
+    display: none;
+}
 
 /*======================================================================================  
 ================================= About Section =================================
@@ -445,7 +546,7 @@ p {
     margin: 0 auto;
     padding: 100px 20px;
 }
-
+/* ////////////////////////NOT IN USE, check class on index.html and remove if needed
 #about .col_right .cta {
     color:black;
 }
@@ -454,6 +555,7 @@ p {
     color:white;
     background-color: black;
 }
+*/
 
 #about .col_left .about_img {
     margin-top: 40px;
@@ -506,19 +608,6 @@ p {
     border-radius: 5px;
 }
 
-#contact .titleForm {
-    font-size: 2rem;
-    font-weight: 300;
-    color: black;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: .2rem;
-    text-align: center;
-}
-
-#contact .titleForm span{
-    color: red;
-}
 /*
 /////////////////////PROBABLY DONT NEEDED////////////////////////////
 #contact .containerForm form .user-details {
@@ -691,7 +780,7 @@ p {
      }
 
     #services .service_top {
-        width: 400px;
+        max-width: 800px;
     }
      /*About*/
      #about .about {
@@ -743,19 +832,24 @@ p {
     #header .nav_list ul li a {
         font-size: 1.8rem;
     }
-    /* End header*/
+    /* End header */
 
+    /* Services */
     #services .service_bottom{
         width: 100%;
     }
 
     #services .service_bottom .service_item {
         margin: 1%;
-        flex-basis: 23%;
+        flex-basis: 60%;
     }
 
     #services .service_top {
-        width: 600px;
+        max-width: 900px;
         margin: 0 auto;
+    }
+
+    #services .service_item {
+        padding: 50px 20%;
     }
 }

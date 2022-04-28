@@ -51,13 +51,15 @@
             </div>
             <div class="service_bottom">
                 <div class="service_item">
-                  <h2>Squares</h2>
-                </div>                
+                    <a href="#squares">
+                         <h2>Squares</h2>
+                    </a>
+                </div>
                 <div class="service_item">
-                    <h2>Sketchbook S</h2>
+                    <h2>Small</h2>
                 </div>          
                 <div class="service_item">
-                    <h2>Sketchbook M</h2>
+                    <h2>Medium</h2>
                 </div>          
                 <div class="service_item">
                     <div class="icon"></div>
@@ -69,7 +71,38 @@
     <!-- End Service Section -->
 
     <!-- Carousel Section -->
-
+    <section id="carousel">
+        <div class="carousel">
+            <div id="squares" class="smallTitles"><span>S</span>quares</div>
+            <div class="collectionDescription">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptatum commodi quae nam? Eveniet iusto sequi at, temporibus quis incidunt possimus delectus fuga dolorum! Eveniet laborum itaque molestiae laudantium corrupti.</p>
+            </div>
+            <button class="carousel__button carousel__button--left is-hidden" >
+                <img src="/Porfolio/icons/icons8-atrás-64.png" alt="">
+            </button>
+            <div class="carousel__track-container">
+                <ul class="carousel__track">
+                    <li class="carousel__slide current-slide">
+                        <img class="carousel__image" src="/Porfolio/img/Raw/02.jpg" alt="">
+                    </li>
+                    <li class="carousel__slide">
+                        <img class="carousel__image" src="/Porfolio/img/Raw/16.jpg" alt="">
+                    </li>
+                    <li class="carousel__slide">
+                        <img class="carousel__image" src="/Porfolio/img/Raw/18.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+            <button class="carousel__button carousel__button--right">
+                <img src="/Porfolio/icons/icons8-adelante-64.png" alt="">
+            </button>
+            <div class="carousel__nav">
+                <button class="carousel__indicator current-slide"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+            </div>
+        </div>
+    </section>
     <!-- About Me Section -->
     <section id="about">
         <div class="about container">
@@ -81,7 +114,7 @@
             <div class="col_right">
                 <h1 class="section_title">About <span>Me</span></h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quisquam atque quo, fugit nesciunt veritatis ullam error consectetur suscipit praesentium commodi, facilis at laboriosam. Ex non eos possimus saepe quas.</p>
-                <a href="#" class="cta">Download HD Image</a>
+                <!--<a href="#" class="cta">Download HD Image</a>-->
             </div>
         </div>
     </section>
@@ -117,7 +150,7 @@
             </div>
         </div>
         <div class="containerForm">
-            <div class="titleForm">Stay <span>in</span> touch</div>
+            <div class="smallTitles">Stay <span>in</span> touch</div>
             <form action="#">
                 <div class="user-details">
                     <div class="input-box">
