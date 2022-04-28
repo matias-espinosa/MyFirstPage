@@ -62,7 +62,7 @@ p {
     transition-property: background-color, color;
     }
     
- .cta:hover {
+.cta:hover {
     /* Buttons hover*/
     color: black;
     background-color: rgb(255, 255, 255);
@@ -492,7 +492,7 @@ p {
 
 #carousel .carousel__button  {
     position: absolute;
-    top: 50%;
+    top: 115%;
     transform: translateY(-50%);
     background: transparent;
     border: 0;
@@ -500,11 +500,11 @@ p {
 }
 
 #carousel .carousel__button--left {
-    left: -18px
+    left: -18px;
 } 
 
 #carousel .carousel__button--right {
-    right: -18px
+    right: -18px;
 } 
 
 #carousel .carousel__button img {
@@ -524,13 +524,16 @@ p {
     height: 10px;
     background-color: rgba(0,0,0,.3);
     margin: 0 12px;
+    cursor: pointer;
 }
 
 #carousel .carousel__indicator.current-slide {
     background: rgba(0,0,0,0.75);
 }
 
-
+#carousel .is-hidden {
+    display: none;
+}
 
 /*======================================================================================  
 ================================= About Section =================================
@@ -848,9 +851,5 @@ p {
 
     #services .service_item {
         padding: 50px 20%;
-    }
-
-    #services .service_item h2 {
-
     }
 }
