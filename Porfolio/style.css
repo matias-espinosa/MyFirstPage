@@ -639,10 +639,26 @@ p {
     transition: all 0.3s ease;
 }
 
-#contact .user-details .input-box input:focus,
-#contact .user-details .input-box input:valid {
+#contact .user-details .input-box input:focus{
+    outline: 0;
     border-color: black;
 }
+
+#contact .user-details .input-box.success input{
+   border-color: rgb(0, 0, 0);
+}
+
+#contact .user-details .input-box.error input{
+    border-color: rgb(255, 0, 0);
+ }
+
+ #contact .user-details .input-box .error{
+     color: red;
+     font-size: 9px;
+     height: 13px;
+ }
+
+
 
 #contact form .button {
     margin-top: 20px;
