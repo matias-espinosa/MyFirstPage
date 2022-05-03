@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>My Page</title>
+    <title>Sik's Site</title>
+
+    <!-- Scripts -->
+    <script defer src="/Porfolio/scripts.js"></script>
+    <script defer type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script defer nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </head>
 <body>
@@ -83,13 +88,31 @@
             <div class="carousel__track-container">
                 <ul class="carousel__track">
                     <li class="carousel__slide current-slide">
-                        <img class="carousel__image" src="/Porfolio/img/Raw/02.jpg" alt="">
+                        <img class="carousel__image" src="/Porfolio/img/Raw/sq01.jpg" alt="">
                     </li>
                     <li class="carousel__slide">
-                        <img class="carousel__image" src="/Porfolio/img/Raw/16.jpg" alt="">
+                        <img class="carousel__image" src="/Porfolio/img/Raw/sq02.jpg" alt="">
                     </li>
                     <li class="carousel__slide">
-                        <img class="carousel__image" src="/Porfolio/img/Raw/18.jpg" alt="">
+                        <img class="carousel__image" src="/Porfolio/img/Raw/sq03.jpg" alt="">
+                    </li>
+                    <li class="carousel__slide">
+                        <img class="carousel__image" src="/Porfolio/img/Raw/sq04.jpg" alt="">
+                    </li>
+                    <li class="carousel__slide">
+                        <img class="carousel__image" src="/Porfolio/img/Raw/sq05.jpg" alt="">
+                    </li>
+                    <li class="carousel__slide">
+                        <img class="carousel__image" src="/Porfolio/img/Raw/sq06.jpg" alt="">
+                    </li>
+                    <li class="carousel__slide">
+                        <img class="carousel__image" src="/Porfolio/img/Raw/sq07.jpg" alt="">
+                    </li>
+                    <li class="carousel__slide">
+                        <img class="carousel__image" src="/Porfolio/img/Raw/sq08.jpg" alt="">
+                    </li>
+                    <li class="carousel__slide">
+                        <img class="carousel__image" src="/Porfolio/img/Raw/sq09.jpg" alt="">
                     </li>
                 </ul>
             </div>
@@ -98,6 +121,12 @@
             </button>
             <div class="carousel__nav">
                 <button class="carousel__indicator current-slide"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
                 <button class="carousel__indicator"></button>
                 <button class="carousel__indicator"></button>
             </div>
@@ -151,27 +180,31 @@
         </div>
         <div class="containerForm">
             <div class="smallTitles">Stay <span>in</span> touch</div>
-            <form action="#">
+            <form id="form" class="form">
                 <div class="user-details">
                     <div class="input-box">
-                        <span class="details">Full Name</span>
-                        <input type="text" placeholder="Enter your name" required>
+                        <label for="fullname" class="details">Full Name</label>
+                        <input id='fullname' type="text" placeholder="Enter your name">
+                        <div class="error"></div>
                     </div>
                     <div class="input-box">
-                        <span class="details">Email</span>
-                        <input type="text" placeholder="Enter your e-mail" required>
+                        <label class="details">Email</label>
+                        <input id='email' type="text" placeholder="Enter your e-mail">
+                        <div class="error"></div>
                     </div>
                     <div class="input-box">
-                        <span class="details">Phone</span>
-                        <input type="text" placeholder="Enter your phone number" required>
+                        <label class="details">Phone</label>
+                        <input id='phone' type="text" placeholder="Enter your phone number">
+                        <div class="error"></div>
                     </div>
                     <div class="input-box">
-                        <span class="details">Social Media</span>
-                        <input type="text" placeholder="Enter your Social Media User" required>
+                        <label class="details">Social Media</label>
+                        <input id='media' type="text" placeholder="Enter your Social Media User">
+                        <div class="error"></div>
                     </div>
                 </div>
                 <div class="button">
-                    <input type="submit" value="Send">
+                    <input type="submit" id='submit' value="Send">
                 </div>
             </form>
         </div>
@@ -190,9 +223,6 @@
 
     </section>
 <!-- End fotter Section -->
-      <script src="/Porfolio/scripts.js"></script>
-      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 </html>

@@ -128,3 +128,94 @@ dotsNav.addEventListener('click', e => {
     hideShowArrows(slides, prevButton, nextButton, targetIndex);
 })
 
+/*================= FORM =================*/
+
+const form = document.getElementById('form');
+const fullname = document.getElementById('fullname');
+const email = document.getElementById('email');
+const phone = document.getElementById('phone');
+const media = document.getElementById('media');
+const error = document.getElementById('error');
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    validateInputs();
+});
+
+const setError = (element, message) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = message;
+    inputControl.classList.add('error');
+    inputControl.classList.remove('success');
+}
+
+const setSuccess = element => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = '';
+    inputControl.classList.add('success');
+    inputControl.classList.remove('error');
+}
+
+const isValidEmail = email => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+
+}
+
+const validateInputs =() => {
+    const fullnameValue = fullname.value.trim();
+    const emailValue = email.value.trim();
+    const phoneValue = phone.value.trim();
+    const mediaValue = media.value.trim();
+
+    if(fullnameValue === '' || fullnameValue == null){
+        setError(fullname, 'Full Name required');
+    } else {
+        setSuccess(fullname);
+    }
+
+    if(emailValue === '') {
+        setError(email, 'Email is required');
+    } else if (!isValidEmail(emailValue)) {
+        setError(email, 'Provide a valid email address');
+    } else {
+        setSuccess(email);
+    }
+
+    if (phoneValue === '') {
+        setError(phone, 'Phone is required');
+    } else if (isNaN(phoneValue)) {
+        setError(phone, 'Numbers only')
+    } else {
+        setSuccess(phone);
+    }
+
+    if (mediaValue === '') {
+        setError(media, 'Social Media Username is required')
+    } else {
+        setSuccess(media);
+    }
+};
+
+const containerForm = document.querySelector('.containerForm');
+const seeform = containerForm.querySelectorAll('form');
+const submitInput = seeform[0].querySelector('input[type="submit"]');
+
+function getDataForm(e){
+    e.preventDefault();
+    var formData = new FormData(seeform[0]);
+    alert(formData.get('fullname') + '-' + formData.get('email') + '-' + formData.get('phone') + '-' + formData.get('media'));
+    console.log (submitInput);
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+    submitInput.addEventListener('click', getDataForm, false);
+}, false);
+
+
+    
+
