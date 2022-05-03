@@ -139,7 +139,6 @@ const error = document.getElementById('error');
 
 form.addEventListener('submit', e => {
     e.preventDefault();
-
     validateInputs();
 });
 
@@ -210,7 +209,7 @@ function getDataForm(e){
     e.preventDefault();
     var formData = new FormData(seeform[0]);
     alert(formData.get('fullname') + '-' + formData.get('email') + '-' + formData.get('phone') + '-' + formData.get('media'));
-    console.log (formData);
+    console.log (submitInput);
 }
 
 document.addEventListener('DOMContentLoaded', function(){

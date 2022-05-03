@@ -820,7 +820,29 @@ p {
      /*Contact*/
      #contact .contact_items {
         padding: 0.5em 20em;
- }
+    }
+
+    /* Carousel */
+       #carousel .carousel {
+        width: 550px;
+        height: 550px;
+    }
+    
+    #carousel .carousel__button img {
+        width: 30px;
+    }
+
+    #carousel .carousel__button  {
+        top: 80%;
+    }
+
+    #carousel .carousel__button--left {
+        left: -70px;
+    } 
+    
+    #carousel .carousel__button--right {
+        right: -70px;
+    } 
 }
  /*End tablet*/
 
@@ -868,4 +890,26 @@ p {
     #services .service_item {
         padding: 50px 20%;
     }
+
+    /* Carousel */
+    #carousel .carousel {
+        width: 750px;
+        height: 750px;
+    }
+    
+    #carousel .carousel__button img {
+        width: 40px;
+    }
+
+    #carousel .carousel__button  {
+        top: 70%;
+    }
+
+    #carousel .carousel__button--left {
+        left: -50px;
+    } 
+    
+    #carousel .carousel__button--right {
+        right: -50px;
+    } 
 }
