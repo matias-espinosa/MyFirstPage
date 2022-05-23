@@ -453,7 +453,7 @@ p {
     position: relative;
     width: 350px;
     height: 350px;
-    margin: 0 auto;    
+    margin: 250px auto;    
 }
 
 #carousel .collectionDescription{
@@ -822,6 +822,13 @@ p {
         padding: 0.5em 20em;
     }
 
+    /* Small titles */
+
+    .smallTitles {
+        font-size: 3rem;
+    }
+
+
     /* Carousel */
        #carousel .carousel {
         width: 550px;
@@ -889,6 +896,12 @@ p {
 
     #services .service_item {
         padding: 50px 20%;
+    }
+
+    /* Small titles */
+
+    .smallTitles {
+        font-size: 3.5rem;
     }
 
     /* Carousel */

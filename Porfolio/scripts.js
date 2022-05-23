@@ -128,6 +128,18 @@ dotsNav.addEventListener('click', e => {
     hideShowArrows(slides, prevButton, nextButton, targetIndex);
 })
 
+/* Carousel selection 
+carouselSelector = function(squares) {
+    var box = document.querySelector(id + ' .project-pictures');
+    var next = box.querySelector(id + ' .next');
+    var prev = box.querySelector(id + ' .prev');
+    var items = box.querySelectorAll(id + ' .content li')
+};
+
+carouselA = carousel('#carousel-a');
+carouselB = carousel('#carousel-b');
+*/
+
 /*================= FORM =================*/
 
 const form = document.getElementById('form');
@@ -201,12 +213,13 @@ const validateInputs =() => {
     }
 };
 
+/*================= SHOW FORM ON ALERT =================*/
 const containerForm = document.querySelector('.containerForm');
 const seeform = containerForm.querySelectorAll('form');
 const submitInput = seeform[0].querySelector('input[type="submit"]');
 
 function getDataForm(e){
-    e.preventDefault();
+    e.preventDefault(); 
     var formData = new FormData(seeform[0]);
     alert(formData.get('fullname') + '-' + formData.get('email') + '-' + formData.get('phone') + '-' + formData.get('media'));
     console.log (submitInput);
@@ -217,5 +230,5 @@ document.addEventListener('DOMContentLoaded', function(){
 }, false);
 
 
-    
+
 
