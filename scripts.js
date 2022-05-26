@@ -128,7 +128,7 @@ dotsNav.addEventListener('click', e => {
     hideShowArrows(slides, prevButton, nextButton, targetIndex);
 })
 
-/* Carousel selection 
+/* Carousel selection - NOT WORKING
 carouselSelector = function(squares) {
     var box = document.querySelector(id + ' .project-pictures');
     var next = box.querySelector(id + ' .next');
@@ -213,7 +213,7 @@ const validateInputs =() => {
     }
 };
 
-/*================= SHOW FORM ON ALERT =================*/
+/*================= SHOW FORM ON ALERT- NOT WORKING, NEEDS TO BE DEBBUGED
 const containerForm = document.querySelector('.containerForm');
 const seeform = containerForm.querySelectorAll('form');
 const submitInput = seeform[0].querySelector('input[type="submit"]');
@@ -229,6 +229,6 @@ document.addEventListener('DOMContentLoaded', function(){
     submitInput.addEventListener('click', getDataForm, false);
 }, false);
 
-
+=================*/
 
 
