@@ -206,7 +206,7 @@ p {
     z-index: 100;
     cursor: pointer;
     transform: scale(.8);
-    margin-right: 20px;
+    margin-right: 0px;
 }
 
 #header .hamburguer:after{
@@ -340,7 +340,8 @@ p {
     text-align: center;
     max-width: 1500px;
     margin: 0 auto;
-    padding: 100px 20px;    
+    padding: 100px 20px;
+    margin-bottom: -150px;
 }
 
 #services .service_bottom {
@@ -453,7 +454,7 @@ p {
     position: relative;
     width: 350px;
     height: 350px;
-    margin: 0 auto;    
+    margin: 250px auto;    
 }
 
 #carousel .collectionDescription{
@@ -793,6 +794,7 @@ p {
     #services .service_bottom .service_item {
          flex-basis: 45%;
          margin: 1.5%;
+         flex-grow: 20;
      }
 
     #services .service_top {
@@ -821,6 +823,13 @@ p {
      #contact .contact_items {
         padding: 0.5em 20em;
     }
+
+    /* Small titles */
+
+    .smallTitles {
+        font-size: 3rem;
+    }
+
 
     /* Carousel */
        #carousel .carousel {
@@ -880,6 +889,7 @@ p {
     #services .service_bottom .service_item {
         margin: 1%;
         flex-basis: 60%;
+        flex-grow: 0;
     }
 
     #services .service_top {
@@ -889,6 +899,12 @@ p {
 
     #services .service_item {
         padding: 50px 20%;
+    }
+
+    /* Small titles */
+
+    .smallTitles {
+        font-size: 3.5rem;
     }
 
     /* Carousel */
