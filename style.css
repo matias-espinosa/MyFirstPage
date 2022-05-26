@@ -858,6 +858,15 @@ p {
 /*Desktop*/
 @media only screen and (min-width: 1200px) {
     /*header*/
+    p {
+        font-size: 2rem;
+    }
+
+    h1.section_title {
+        font-size: 5rem;
+        font-weight: 500;
+    }
+
     #header .hamburguer {
         display: none;
     }
@@ -882,6 +891,7 @@ p {
     /* End header */
 
     /* Services */
+    
     #services .service_bottom{
         width: 100%;
     }
@@ -909,7 +919,7 @@ p {
 
     /* Carousel */
     #carousel .carousel {
-        width: 750px;
+        width: 750px;go
         height: 750px;
     }
     
