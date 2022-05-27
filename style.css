@@ -469,7 +469,6 @@ p {
 }
 
 #carousel .carousel__track-container {
-    background-color: aqua;
     height: 100%;
     position: relative;
     overflow: hidden;
