@@ -1,4 +1,4 @@
-/*================= HAMBURGUER =================*/
+/*================= HAMBURGUER ==================*/
 
 const hamburguer = document.querySelector ('.header .nav_bar .nav_list .hamburguer');
 const mobile_menu = document.querySelector ('.header .nav_bar .nav_list ul');
